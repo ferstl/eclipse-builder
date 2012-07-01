@@ -7,7 +7,7 @@ SCRIPT_NAME=`basename $0`
 
 # Commandline options (long and short)
 OPTIONS_SHORT="c:lp:d:n:h"
-OPTIONS_LONG="p2command:,local,platform:,destination:name:help"
+OPTIONS_LONG="p2command:,local,platform:,destination:,name:,help"
 
 # Configuration parameters and defaults
 USE_LOCAL_REPOSITORIES="false"
@@ -67,7 +67,7 @@ fi
 eval set -- "$tmp"
 while true; do
   case "$1" in
-    -c|p2command)
+    -c|--p2command)
       P2_START_CMD="$2"
       shift 2
       ;;
