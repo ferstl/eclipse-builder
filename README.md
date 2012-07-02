@@ -98,3 +98,7 @@ Assuming that the `eclipse-builder.sh` script is in a different directory called
     --name my-personal-eclipse-distribution \
     ../my-eclipse-build/configuration-1.conf
 
+
+### Links
+ - [P2 Director Documentation](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html)
+ - [Nexus P2 Repository Plugins](https://docs.sonatype.org/display/Nexus/Nexus+OSGi+Experimental+Features+-+P2+Repository+Plugin)
