@@ -84,7 +84,9 @@ This command will create Eclipse distributions for all three supported platforms
     --platform macosx \
     --platform windows \
     --destination /my-eclipse-build/distros \
-    --name my-personal-eclipse-distribution
+    --name my-personal-eclipse-distribution \
+    configuration-1.conf \
+    configuration-2.conf
 
 
 #### Example 3: Create an Eclipse distribution when the eclipse-builder.sh Script is in a different directory
