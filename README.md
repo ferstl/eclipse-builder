@@ -47,11 +47,11 @@ Running `eclipse-builder.sh --help` shows ho to use the script:
 ### Examples
 The following examples are based on the directory structure below where the `eclipse-builder.sh` script, the P2 Director and the configuration files are located in the same directory.
 
-    /my-eclipse-build
-      |- eclipse
+    /home/me/my-eclipse-build/
+      |- eclipse/
       |   |- ...
-      |   |- features
-      |   |- plugins
+      |   |- features/
+      |   |- plugins/
       |   |- ...
       |   |- eclipse
       |   |- ...
@@ -62,12 +62,12 @@ The following examples are based on the directory structure below where the `ecl
 
 
 #### Example 1: Create an eclipse distribution as described in `configuration-1.conf` for Linux:
-This command will create the Eclipse distribution in `/my-eclipse-build/distros/my-personal-eclipse-distribution-linux-gtk-x86_64`:
+This command will create the Eclipse distribution in `~/my-eclipse-build/distros/my-personal-eclipse-distribution-linux-gtk-x86_64`:
 
-    cd /my-eclipse-build
+    cd /home/me/my-eclipse-build
     ./eclipse-builder.sh \
     --platform linux \
-    --destination /my-eclipse-build/distros \
+    --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
     configuration-1.conf
     
@@ -75,28 +75,28 @@ This command will create the Eclipse distribution in `/my-eclipse-build/distros/
 
 
 #### Example 2: Create Eclipse distributions for all supported platforms as described in both configuration files using local repositories:
-This command will create Eclipse distributions for all three supported platforms in `/my-eclipse-build/distros/my-personal-eclipse-distribution-<platform>`
+This command will create Eclipse distributions for all three supported platforms in `~/my-eclipse-build/distros/my-personal-eclipse-distribution-<platform>`
 
-    cd /my-eclipse-build
+    cd /home/me/my-eclipse-build
     ./eclipse-builder.sh \
     --local \
     --platform linux \
     --platform macosx \
     --platform windows \
-    --destination /my-eclipse-build/distros \
+    --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
     configuration-1.conf \
     configuration-2.conf
 
 
 #### Example 3: Create an Eclipse distribution when the eclipse-builder.sh Script is in a different directory
-Assuming that the `eclipse-builder.sh` script is in a different directory called `/eclipse-builder`, the `--p2command` has to be set to point to the executable of the P2 director application:
+Assuming that the `eclipse-builder.sh` script is in a different directory called `/home/me/eclipse-builder`, the `--p2command` has to be set to point to the executable of the P2 director application:
 
-    cd /eclipse-builder
+    cd /home/me/eclipse-builder
     ./eclipse-builder.sh \
     --p2command ../my-eclipse-build/eclipse/eclipse
     --platform linux \
-    --destination ../my-eclipse-build/distros \
+    --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
     ../my-eclipse-build/configuration-1.conf
 
