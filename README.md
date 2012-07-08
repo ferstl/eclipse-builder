@@ -2,7 +2,7 @@
 *- Creates Eclipse distributions for Linux (GTK), Mac OSX and Windows using the P2 Director application*
 
 ### Prerequisites
- - A Bash shell
+ - A Bash shell version 4.0 or greater (Attention: Mac OSX still ships with version 3.2!)
  - A recent Eclipse distribution from http://download.eclipse.org containing the P2 Director application
  - The `eclipse-builder.sh` script from https://github.com/ferstl/eclipse-builder
  - One or more configuration files describing the content of the Eclipse distribution to be built
