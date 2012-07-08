@@ -23,7 +23,11 @@ A configuration file contains the information which installable units (IUs) will
  - `local-url`: Alternative URL where the listed IUs can be downloaded. This tag can be used to get the IUs from a locally mirrored repository or from a P2-enabled Nexus. The configuration file must contain one or more `local-url` tags in case the script is executed with the `--local` option.
  - `tag`: Name of the installation tag. The tag will be shown in the installation history of the built Eclipse distribution. This tag is optional.
  - `iu`: IU to be installed in the Eclipse distribution. The configuration file must contain one or more `iu` tags.
- 
+
+#### Example Configuration
+There are three configuration files in the `eclipse-juno-example` folder to build an Eclipse "Juno" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide-3.8.conf` will create an Eclipse 3.8 distribution, the file `01_eclipse-ide-4.2.conf` will create an Eclipse 4.2 distribution. So only one of these files should be used in the same build. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
+
+
  
 ### How to run the eclipse-builder.sh Script
 Running `eclipse-builder.sh --help` shows ho to use the script:
@@ -56,25 +60,28 @@ The following examples are based on the directory structure below where the `ecl
       |   |- eclipse
       |   |- ...
       |
-      |- configuration-1.conf
-      |- configuration-2.conf
+      |- eclipse-juno-example/
+      |   |- 01_eclipse-ide-3.8.conf
+      |   |- 01_eclipse-ide-4.2.conf
+      |   |- 02_eclipse-base.conf
+      |
       |- eclipse-builder.sh
 
 
-#### Example 1: Create an eclipse distribution as described in `configuration-1.conf` for Linux:
-This command will create the Eclipse distribution in `~/my-eclipse-build/distros/my-personal-eclipse-distribution-linux-gtk-x86_64`:
+#### Example 1: Create a plain Eclipse 3.8 IDE distribution for Linux:
+This command will create the Eclipse distribution in `~/my-eclipse-build/distros/my-personal-eclipse-ide-linux-gtk-x86_64`:
 
     cd /home/me/my-eclipse-build
     ./eclipse-builder.sh \
     --platform linux \
     --destination /home/me/my-eclipse-build/distros \
-    --name my-personal-eclipse-distribution \
-    configuration-1.conf
+    --name my-personal-eclipse-ide \
+    eclipse-juno-example/01_eclipse-ide-3.8.conf
     
 **Note that the `--destination` option requires a fully qualified path!** Relative paths won't work due to this [Bug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=329619).
 
 
-#### Example 2: Create Eclipse distributions for all supported platforms as described in both configuration files using local repositories:
+#### Example 2: Create Eclipse 4.2 distributions for all supported platforms using local repositories:
 This command will create Eclipse distributions for all three supported platforms in `~/my-eclipse-build/distros/my-personal-eclipse-distribution-<platform>`
 
     cd /home/me/my-eclipse-build
@@ -85,12 +92,12 @@ This command will create Eclipse distributions for all three supported platforms
     --platform windows \
     --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
-    configuration-1.conf \
-    configuration-2.conf
+    eclipse-juno-example/01_eclipse-ide-4.2.conf \
+    eclipse-juno-example/02_eclipse-base.conf
 
 
 #### Example 3: Create an Eclipse distribution when the eclipse-builder.sh Script is in a different directory
-Assuming that the `eclipse-builder.sh` script is in a different directory called `/home/me/eclipse-builder`, the `--p2command` has to be set to point to the executable of the P2 director application:
+Assuming that the `eclipse-builder.sh` script and the example configuration files are in a different directory called `/home/me/eclipse-builder`, the `--p2command` has to be set to point to the executable of the P2 director application:
 
     cd /home/me/eclipse-builder
     ./eclipse-builder.sh \
@@ -98,7 +105,8 @@ Assuming that the `eclipse-builder.sh` script is in a different directory called
     --platform linux \
     --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
-    ../my-eclipse-build/configuration-1.conf
+    eclipse-juno-example/01_eclipse-ide-4.2.conf \
+    eclipse-juno-example/02_eclipse-base.conf
 
 
 ### Links
