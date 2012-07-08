@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# This script can only run with bash versions >= 4.
+if [ ${BASH_VERSION%%.*} -lt 4 ]; then
+  echo "You are using bash version $BASH_VERSION. This script requires bash in a version >= 4. Terminating..."
+  exit 1
+fi
+
 # Locations
 BASEDIR=`cd $(dirname $0); pwd`
 WORKINGDIR=`pwd`
