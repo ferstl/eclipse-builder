@@ -19,10 +19,13 @@ A configuration file contains the information which installable units (IUs) will
     iu:org.eclipse.egit.import.feature.group
     iu:...
 
- - `remote-url`: URL of the remote repository where the listed IUs can be downloaded. The configuration file must contain one or more `remote-url` tags.
- - `local-url`: Alternative URL where the listed IUs can be downloaded. This tag can be used to get the IUs from a locally mirrored repository or from a P2-enabled Nexus. The configuration file must contain one or more `local-url` tags in case the script is executed with the `--local` option.
- - `tag`: Name of the installation tag. The tag will be shown in the installation history of the built Eclipse distribution. This tag is optional.
- - `iu`: IU to be installed in the Eclipse distribution. The configuration file must contain one or more `iu` tags.
+| Tag | Description |
+|:----|:------------|
+| `remote-url` | URL of the remote repository where the listed IUs can be downloaded. The configuration file must contain one or more `remote-url` tags.
+| `local-url` | Alternative URL where the listed IUs can be downloaded. This tag can be used to get the IUs from a locally mirrored repository or from a P2-enabled Nexus. The configuration file must contain one or more `local-url` tags in case the script is executed with the `--local` option.
+| `tag` | Name of the installation tag. The tag will be shown in the installation history of the built Eclipse distribution. This tag is optional.
+| `iu` | IU to be installed in the Eclipse distribution. The configuration file must contain one or more `iu` tags.
+
 
 #### Example Configuration
 There are three configuration files in the `eclipse-juno-example` folder to build an Eclipse "Juno" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide-3.8.conf` will create an Eclipse 3.8 distribution, the file `01_eclipse-ide-4.2.conf` will create an Eclipse 4.2 distribution. So only one of these files should be used in the same build. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
