@@ -28,7 +28,7 @@ A configuration file contains the information which installable units (IUs) will
 
 
 #### Example Configuration
-There are three configuration files in the `eclipse-juno-example` folder to build an Eclipse "Juno" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide-3.8.conf` will create an Eclipse 3.8.1 distribution, the file `01_eclipse-ide-4.2.conf` will create an Eclipse 4.2.1 distribution. So only one of these files should be used in the same build. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
+There are three configuration files in the `eclipse-juno-example` folder to build an Eclipse "Juno" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide-3.8.conf` will create an Eclipse 3.8.2 distribution, the file `01_eclipse-ide-4.2.conf` will create an Eclipse 4.2.2 distribution. So only one of these files should be used in the same build. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
 
 
  
