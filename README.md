@@ -33,9 +33,9 @@ There are three configuration files in the `eclipse-juno-example` folder to buil
 
  
 ### How to run the eclipse-builder.sh Script
-Running `eclipse-builder.sh --help` shows ho to use the script:
+Running `eclipse-builder.sh --help` shows how to use the script:
 
-    Usage: $SCRIPT_NAME <options> <configs>
+    Usage: eclipse-builder.sh <options> <configs>
       <options>:
         -c --p2command    Command to start the P2 director
                           (default: $BASEDIR/eclipse/eclipse)
