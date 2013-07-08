@@ -11,7 +11,7 @@
 ### The configuration file(s)
 A configuration file contains the information which installable units (IUs) will be installed into the Eclipse distribution and where to download them:
 
-    remote-url:http://download.eclipse.org/releases/juno
+    remote-url:http://download.eclipse.org/releases/kepler
     local-url:file:///home/me/my-local-repository
     tag:Basic Installation
     iu:org.eclipse.sdk.ide
@@ -28,7 +28,7 @@ A configuration file contains the information which installable units (IUs) will
 
 
 #### Example Configuration
-There are three configuration files in the `eclipse-juno-example` folder to build an Eclipse "Juno" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide-3.8.conf` will create an Eclipse 3.8.2 distribution, the file `01_eclipse-ide-4.2.conf` will create an Eclipse 4.2.2 distribution. So only one of these files should be used in the same build. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
+There are two configuration files in the `eclipse-kepler-example` folder to build an Eclipse "Kepler" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide-4.3.conf` will create an Eclipse 4.3 distribution. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
 
 
  
@@ -63,15 +63,14 @@ The following examples are based on the directory structure below where the `ecl
       |   |- eclipse
       |   |- ...
       |
-      |- eclipse-juno-example/
-      |   |- 01_eclipse-ide-3.8.conf
-      |   |- 01_eclipse-ide-4.2.conf
+      |- eclipse-kepler-example/
+      |   |- 01_eclipse-ide-4.3.conf
       |   |- 02_eclipse-base.conf
       |
       |- eclipse-builder.sh
 
 
-#### Example 1: Create a plain Eclipse 3.8 IDE distribution for Linux:
+#### Example 1: Create a plain Eclipse 4.3 IDE distribution for Linux:
 This command will create the Eclipse distribution in `~/my-eclipse-build/distros/my-personal-eclipse-ide-linux-gtk-x86_64`:
 
     cd /home/me/my-eclipse-build
@@ -79,12 +78,12 @@ This command will create the Eclipse distribution in `~/my-eclipse-build/distros
     --platform linux \
     --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-ide \
-    eclipse-juno-example/01_eclipse-ide-3.8.conf
+    eclipse-kepler-example/01_eclipse-ide-4.3.conf
     
 **Note that the `--destination` option requires a fully qualified path!** Relative paths won't work due to this [Bug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=329619).
 
 
-#### Example 2: Create Eclipse 4.2 distributions for all supported platforms using local repositories:
+#### Example 2: Create Eclipse 4.3 distributions for all supported platforms using local repositories:
 This command will create Eclipse distributions for all three supported platforms in `~/my-eclipse-build/distros/my-personal-eclipse-distribution-<platform>`
 
     cd /home/me/my-eclipse-build
@@ -95,8 +94,8 @@ This command will create Eclipse distributions for all three supported platforms
     --platform windows \
     --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
-    eclipse-juno-example/01_eclipse-ide-4.2.conf \
-    eclipse-juno-example/02_eclipse-base.conf
+    eclipse-kepler-example/01_eclipse-ide-4.3.conf \
+    eclipse-kepler-example/02_eclipse-base.conf
 
 
 #### Example 3: Create an Eclipse distribution when the eclipse-builder.sh Script is in a different directory
@@ -108,8 +107,8 @@ Assuming that the `eclipse-builder.sh` script and the example configuration file
     --platform linux \
     --destination /home/me/my-eclipse-build/distros \
     --name my-personal-eclipse-distribution \
-    eclipse-juno-example/01_eclipse-ide-4.2.conf \
-    eclipse-juno-example/02_eclipse-base.conf
+    eclipse-kepler-example/01_eclipse-ide-4.3.conf \
+    eclipse-kepler-example/02_eclipse-base.conf
 
 
 ### Links
