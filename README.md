@@ -112,5 +112,5 @@ Assuming that the `eclipse-builder.sh` script and the example configuration file
 
 
 ### Links
- - [P2 Director Documentation](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html)
+ - [P2 Director Documentation](http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html)
  - [Nexus P2 Repository Plugins](https://docs.sonatype.org/display/Nexus/Nexus+OSGi+Experimental+Features+-+P2+Repository+Plugin)
