@@ -28,7 +28,7 @@ A configuration file contains the information which installable units (IUs) will
 
 
 #### Example Configuration
-There are two configuration files in the `eclipse-mars-example` folder to build an Eclipse "Mars" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide.conf` will create an Eclipse 4.4 distribution. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
+There are two configuration files in the `eclipse-mars-example` folder to build an Eclipse "Mars" distribution containing the Java IDE, EGit and M2Eclipse. The configuration file `01_eclipse-ide.conf` will create an Eclipse 4.5 distribution. The file `02_eclipse-base.conf` will add EGit and M2Eclipse.
 
 
  
@@ -70,7 +70,7 @@ The following examples are based on the directory structure below where the `ecl
       |- eclipse-builder.sh
 
 
-#### Example 1: Create a plain Eclipse 4.4 IDE distribution for Linux:
+#### Example 1: Create a plain Eclipse 4.5 IDE distribution for Linux:
 This command will create the Eclipse distribution in `~/my-eclipse-build/distros/my-personal-eclipse-ide-linux-gtk-x86_64`:
 
     cd /home/me/my-eclipse-build
@@ -83,7 +83,7 @@ This command will create the Eclipse distribution in `~/my-eclipse-build/distros
 **Note that the `--destination` option requires a fully qualified path!** Relative paths won't work due to this [Bug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=329619).
 
 
-#### Example 2: Create Eclipse 4.4 distributions for all supported platforms using local repositories:
+#### Example 2: Create Eclipse 4.5 distributions for all supported platforms using local repositories:
 This command will create Eclipse distributions for all three supported platforms in `~/my-eclipse-build/distros/my-personal-eclipse-distribution-<platform>`
 
     cd /home/me/my-eclipse-build
