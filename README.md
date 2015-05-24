@@ -3,7 +3,7 @@
 
 ### Prerequisites
  - A Bash shell version 4.0 or greater (Attention: Mac OSX still ships with version 3.2!)
- - A recent Eclipse distribution from http://download.eclipse.org containing the P2 Director application. **Important: For Mac OSX builds version 4.5 (Mars) or higher is required!**
+ - A recent Eclipse distribution from http://download.eclipse.org containing the P2 Director application. **Important: P2 Director version 4.5 (Mars) or higher is required for Mac OSX builds!**
  - The `eclipse-builder.sh` script from https://github.com/ferstl/eclipse-builder
  - One or more configuration files describing the content of the Eclipse distribution to be built
 
