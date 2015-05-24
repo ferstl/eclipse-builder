@@ -227,7 +227,11 @@ install() {
   repository_urls=`get_repository_urls "$config_file"`
   installable_units=`get_installable_units "$config_file"`
   installation_tag=`get_installation_tag "$config_file"`
-  destination="$DESTINATION/$DISTRO_NAME-${P2_DEST_SUFFIX[$platform]}/$DISTRO_NAME"
+  if [ "$platform" == "macosx" ]; then
+    destination="$DESTINATION/$DISTRO_NAME-${P2_DEST_SUFFIX[$platform]}.app/Contents/Eclipse"
+  else
+    destination="$DESTINATION/$DISTRO_NAME-${P2_DEST_SUFFIX[$platform]}/$DISTRO_NAME"
+  fi
 
   install_cmd="$P2_START_CMD"
   install_cmd+=" $P2_BASE_OPTS"
