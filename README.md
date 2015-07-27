@@ -3,7 +3,7 @@
 
 ### Prerequisites
  - A Bash shell version 4.0 or greater (Attention: Mac OSX still ships with version 3.2!)
- - A recent Eclipse distribution from http://download.eclipse.org containing the P2 Director application. **Important: P2 Director version 4.5 (Mars) or higher is required for Mac OSX builds!**
+ - A recent P2 director application like the [Buckminster](http://www.eclipse.org/buckminster/downloads.html)'s [headless director](http://www.eclipse.org/downloads/download.php?file=/tools/buckminster/products/director_latest.zip) or a standard Eclipse distribution from http://download.eclipse.org. **Important: P2 Director version 4.5 (Mars) or higher is required for Mac OSX builds!**
  - The `eclipse-builder.sh` script from https://github.com/ferstl/eclipse-builder
  - One or more configuration files describing the content of the Eclipse distribution to be built
 
@@ -109,6 +109,8 @@ Assuming that the `eclipse-builder.sh` script and the example configuration file
     --name my-personal-eclipse-distribution \
     eclipse-mars-example/01_eclipse-ide.conf \
     eclipse-mars-example/02_eclipse-base.conf
+ 
+ If you are using Buckminster's headless director, set `--p2command ../my-eclipse-build/director/director`.
 
 
 ### Links
