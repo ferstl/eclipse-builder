@@ -230,7 +230,7 @@ install() {
   if [ "$platform" == "macosx" ]; then
     destination="$DESTINATION/$DISTRO_NAME-${P2_DEST_SUFFIX[$platform]}.app/Contents/Eclipse"
   else
-    destination="$DESTINATION/$DISTRO_NAME-${P2_DEST_SUFFIX[$platform]}/$DISTRO_NAME"
+    destination="$DESTINATION/$DISTRO_NAME-${P2_DEST_SUFFIX[$platform]}"
   fi
 
   install_cmd="$P2_START_CMD"
