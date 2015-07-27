@@ -114,4 +114,4 @@ Assuming that the `eclipse-builder.sh` script and the example configuration file
 
 
 ### Links
- - [P2 Director Documentation](http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html)
+ - [P2 Director Documentation](http://help.eclipse.org/mars/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html)
