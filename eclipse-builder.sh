@@ -12,11 +12,10 @@ WORKINGDIR=`pwd`
 SCRIPT_NAME=`basename $0`
 
 # Commandline options (long and short)
-OPTIONS_SHORT="c:lp:d:n:h"
-OPTIONS_LONG="p2command:,local,platform:,destination:,name:,help"
+OPTIONS_SHORT="c:p:d:n:h"
+OPTIONS_LONG="p2command:,platform:,destination:,name:,help"
 
 # Configuration parameters and defaults
-USE_LOCAL_REPOSITORIES="false"
 PLATFORMS=()
 DESTINATION="$WORKINGDIR"
 DISTRO_NAME="custom-eclipse"
@@ -48,8 +47,6 @@ Usage: $SCRIPT_NAME <options> <configs>
   <options>:
     -c --p2command    Command to start the P2 director
                       (default: \$BASEDIR/eclipse/eclipse)
-    -l --local        Use local (on-site) repositories to download installable
-                      units.
     -p --platform     Distribution platform. The currently supported platforms
                       are "linux", "macosx", "windows" (all 64bit)
     -d --destination  Destination directory (must be a fully qualifed name!)
@@ -76,11 +73,6 @@ while true; do
     -c|--p2command)
       P2_START_CMD="$2"
       shift 2
-      ;;
-
-    -l|--local)
-      USE_LOCAL_REPOSITORIES="true"
-      shift
       ;;
 
     -p|--platform)
@@ -178,9 +170,6 @@ get_multiline_configuration() {
 get_repository_urls() {
   config_file="$1"
   config_tag="remote-url:"
-  if [[ "$USE_LOCAL_REPOSITORIES" == "true" ]]; then
-    config_tag="local-url:"
-  fi
 
   echo "`get_multiline_configuration "$config_file" "$config_tag"`"
 }
