@@ -1,0 +1,6 @@
+language: generic
+sudo: false
+script:
+    - wget -q http://ftp.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/tools/buckminster/products/director_latest.zip
+    - unzip -q director_latest.zip
+    - ./eclipse-builder.sh -c $PWD/director/director -p linux -d $PWD -n eclipse-neon eclipse-neon-example/*.conf
