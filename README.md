@@ -1,6 +1,8 @@
 # Eclipse Builder
 *- Creates Eclipse distributions for Linux (GTK), Mac OSX and Windows using the P2 Director application*
 
+[![Build Status](https://travis-ci.org/ferstl/eclipse-builder.svg?branch=master)](https://travis-ci.org/ferstl/eclipse-builder)
+
 ### Prerequisites
  - A Bash shell version 4.0 or greater (Attention: Mac OSX still ships with version 3.2!)
  - A recent P2 director application like the [Buckminster](http://www.eclipse.org/buckminster/downloads.html)'s [headless director](http://www.eclipse.org/downloads/download.php?file=/tools/buckminster/products/director_latest.zip) or a standard Eclipse distribution from http://download.eclipse.org. **Important: P2 Director version 4.5 (Neon) or higher is required for Mac OSX builds!**
