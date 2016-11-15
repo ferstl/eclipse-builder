@@ -4,3 +4,4 @@ script:
     - wget -q http://ftp.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/tools/buckminster/products/director_latest.zip
     - unzip -q director_latest.zip
     - ./eclipse-builder.sh -c $PWD/director/director -p linux -d $PWD -n eclipse-neon eclipse-neon-example/*.conf
+    - ls -al $PWD/eclipse-*-linux-gtk-x86_64/features
